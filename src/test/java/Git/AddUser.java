@@ -38,4 +38,39 @@ public class AddUser {
 		.then()
 			.log().all();
 	}
+
+	@Test
+	public void CreateUser3()
+	{
+		given()
+			.contentType("application/json")
+			.body("{\r\n"
+					+ "    \"name\": \"yuvan\",\r\n"
+					+ "    \"role\": \"qa\",\r\n"
+					+ "    \"age\": 22,\r\n"
+					+ "    \"city\": \"hyd\"\r\n"
+					+ "}")
+		.when()
+			.post("http://localhost:3000/posts/")
+		.then()
+			.log().all();
+	}
+	
+
+	@Test
+	public void CreateUser4()
+	{
+		given()
+			.contentType("application/json")
+			.body("{\r\n"
+					+ "    \"name\": \"vissu\",\r\n"
+					+ "    \"role\": \"qa\",\r\n"
+					+ "    \"age\": 29,\r\n"
+					+ "    \"city\": \"hyd\"\r\n"
+					+ "}")
+		.when()
+			.post("http://localhost:3000/posts/")
+		.then()
+			.log().all();
+	}
 }
