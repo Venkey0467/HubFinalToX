@@ -90,4 +90,21 @@ public class AddUser {
 		.then()
 			.log().all();
 	}
+	
+	@Test
+	public void CreateUser6()
+	{
+		given()
+			.contentType("application/json")
+			.body("{\r\n"
+					+ "    \"name\": \"rk\",\r\n"
+					+ "    \"role\": \"qa\",\r\n"
+					+ "    \"age\": 38,\r\n"
+					+ "    \"city\": \"hyd\"\r\n"
+					+ "}")
+		.when()
+			.post("http://localhost:3000/posts/")
+		.then()
+			.log().all();
+	}
 }
